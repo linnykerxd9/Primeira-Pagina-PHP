@@ -1,0 +1,42 @@
+body{
+    background-color: cornflowerblue;
+}
+.sectionForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width:80%;
+    height:100%;
+    margin-left:10%;
+}
+.center{
+    margin-top: 10%;
+}
+.card {
+    background-color: white;
+    border-radius: 5px;
+    width:40%;
+    height: 300px;
+    box-shadow: 2px 3px 9px 0px;
+}
+input{
+    border: none;
+    border-bottom: 1px inset #9a9191;
+}
+.formulario{
+    height:60%;
+}
+.divNome{
+    margin-bottom: 31px;
+    margin-top: 58px;
+}
+.btnEnviar{
+    margin-top: calc(20% - 58px);
+    background-color: powderblue;
+    width: 76px;
+    height: 29px;
+    border-radius: 5px;
+    font-size: 16px;
+}

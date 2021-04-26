@@ -1,26 +1,34 @@
-<?php
-
-$categorias  = [];
-$categorias[] = "infantil";
-$categorias[] = "adolescente";
-$categorias[] = "adulto";
-
-//print_r($categorias);
-
-$nome = "Jonas";
-$idade = 8;
-
-//var_dump($nome);
-//var_dump($idade);
-
-if($idade >= 6 && $idade <= 12){
-    echo "O nadador ",$nome, " compete na categoria:" ,$categorias[0];
-}
-else if($idade >=13 && $idade < 18){
-    echo "O nadador ",$nome, " compete na categoria:" ,$categorias[1];
-}
-else {
-    echo "O nadador ",$nome, " compete na categoria:" ,$categorias[2];
-}
-
-?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<section class="sectionForm">
+    <div class="center card">
+        <div class="container">
+            <div class="titulo">
+                <h3>FORMULÁRIO PARA INSCRIÇÃO DE COMPETIDORES</h3>
+            </div>
+            <div class="formulario">
+                <form action="./php/script.php" method="post">
+                    <div class="divNome">
+                    <label for="nome">Seu nome:</label>
+                    <input type="text" name="nome">
+                    </div>
+                    <div class="divIdade">
+                    <label for="idade">Sua idade:</label>
+                    <input type="number" name="idade">
+                    </div>
+                    <input type="submit" class="btnEnviar">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
