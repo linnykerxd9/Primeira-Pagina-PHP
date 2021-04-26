@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,6 +19,12 @@
             </div>
             <div class="formulario">
                 <form action="./php/script.php" method="post">
+                <?php
+                $mensagemDeErro = isset($_SESSION['mensagem-de-erro']) ? $_SESSION['mensagem-de-erro'] : '';
+                if(!empty($mensagemDeErro)){
+                    echo $mensagemDeErro;
+                }
+                ?>
                     <div class="divNome">
                     <label for="nome">Seu nome:</label>
                     <input type="text" name="nome">
