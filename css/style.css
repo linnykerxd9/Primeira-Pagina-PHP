@@ -30,13 +30,23 @@ input{
 }
 .divNome{
     margin-bottom: 31px;
-    margin-top: 40px;
+    margin-top: 40px!important;
 }
 .btnEnviar{
-    margin-top: calc(20% - 58px);
+    margin-top: calc(35% - 58px);
     background-color: powderblue;
     width: 76px;
     height: 29px;
     border-radius: 5px;
     font-size: 16px;
+}
+.row{
+    display:-webkit-inline-box;
+}
+.resposta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    width: 50%;
 }
