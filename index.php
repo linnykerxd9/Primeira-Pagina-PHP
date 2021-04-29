@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <?php
-    session_start();
+   include("./servicos/servicoMensagemSessao.php");
 ?>
 <body>
 <section class="sectionForm">
@@ -19,10 +19,10 @@
             </div>
             <div class="row">
             <div class="formulario">
-                <form action="./php/script.php" method="post">
+                <form action="./scripts/script.php" method="post">
                 <?php
-                $mensagemDeErro = isset($_SESSION['mensagem-de-erro']) ? $_SESSION['mensagem-de-erro'] : '';
-                $mensagemDeSucesso = isset($_SESSION['mensagem-de-sucesso']) ? $_SESSION['mensagem-de-sucesso'] : '';
+                $mensagemDeErro = obterMensagemErro();
+                $mensagemDeSucesso = obterMensagemSucesso();
                 if(!empty($mensagemDeErro)){
                     echo $mensagemDeErro;
                 }
@@ -43,8 +43,14 @@
             </div>
             <div class="resposta">
                 <p><?php
-                    $mensagemCategoria = isset($_SESSION['mensagem-da-categoria']) ? $_SESSION['mensagem-da-categoria'] : '';
-                    echo $mensagemCategoria;
+                     $mensagemDeErro2 = obterMensagemErro2();
+                    $mensagemCategoria = obterMensagemCategoria();
+                    if(!empty($mensagemCategoria)){
+                        echo $mensagemCategoria;
+                    }
+                     if(!empty($mensagemDeErro2)){
+                    echo $mensagemDeErro2;
+                    }
                 ?></p>
             </div>
             </div>
